@@ -17,13 +17,16 @@ public class TipCalculator {
     }
 
 
-    public void printBills() {
-        totalTip = bill * tip;
-        totalBill = bill + totalTip;
-        tipPerPerson = totalTip / people;
-        totalPerPerson = totalBill / people;
+    public void calculateBills() {
+        this.totalTip = this.bill * this.tip;
+        this.totalBill = this.bill + this.totalTip;
+        this.tipPerPerson = this.totalTip / this.people;
+        this.totalPerPerson = this.totalBill / this.people;
+    }
 
-        System.out.println("\nCalculations complete.\nTotal Tip Amount: " + df.format(totalTip) + "\nTotal Bill (including tip): " + df.format(totalBill) + "\nTip Per Person: " + df.format(tipPerPerson) + "\nTotal Per Person: " + df.format(totalPerPerson));
+    public void printBills() {
+
+        System.out.println("\nCalculations complete.\nTotal Tip Amount: " + df.format(this.totalTip) + "\nTotal Bill (including tip): " + df.format(this.totalBill) + "\nTip Per Person: " + df.format(this.tipPerPerson) + "\nTotal Per Person: " + df.format(this.totalPerPerson));
 
     }
 

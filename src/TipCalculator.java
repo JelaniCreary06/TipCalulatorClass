@@ -17,7 +17,7 @@ public class TipCalculator {
     }
 
 
-    public void calculateBills() {
+    private void calculateBills() {
         this.totalTip = this.bill * this.tip;
         this.totalBill = this.bill + this.totalTip;
         this.tipPerPerson = this.totalTip / this.people;
@@ -26,6 +26,7 @@ public class TipCalculator {
 
     public void printBills() {
 
+        calculateBills();
         System.out.println("\nCalculations complete.\nTotal Tip Amount: " + df.format(this.totalTip) + "\nTotal Bill (including tip): " + df.format(this.totalBill) + "\nTip Per Person: " + df.format(this.tipPerPerson) + "\nTotal Per Person: " + df.format(this.totalPerPerson));
 
     }
